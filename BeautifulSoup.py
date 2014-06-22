@@ -22,3 +22,6 @@ def asin2min(asin):
         return str(shippingp + price)
     else:
         return ""
+
+def asin2bn(asin):
+    return ""
