@@ -25,36 +25,6 @@ for line in barcodes:
         result = api.item_lookup(bc, SearchIndex='All', IdType='EAN',
                                  ResponseGroup="Small,SalesRank")
         for item in result.Items.Item:
-            #try:
-            #    output.write(
-            #        '%s|%s|%s|%d|%s|%s\n' % (
-            #            bc, item.ASIN, item.ItemAttributes.Title,
-            #            item.SalesRank,
-            #            asin2min(item.ASIN), asin2bn(item.ASIN)))
-            #except:
-            #    output.write("%s|exception||||\n" % (bc))
-
-            #try:
-            #    asin = str(item.ASIN)
-            #except:
-            #    asin = ""
-            #try:
-            #    title = str(item.ItemAttributes.Title)
-            #except:
-            #    title = ""
-            #try:
-            #    rank = str(item.SalesRank)
-            #except:
-            #    rank = ""
-            #try:
-            #    minprice = asin2min(item.ASIN)
-            #except:
-            #    minprice = ""
-            #try:
-            #    bn = asin2bn(item.ASIN)
-            #except:
-            #    bn = ""
-
             if bc == "5060149520178":
                 pass
             asin = str(item.ASIN) if hasattr(item, "ASIN") else ""
