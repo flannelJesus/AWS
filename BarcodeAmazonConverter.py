@@ -65,9 +65,8 @@ for line in barcodes:
                 hasattr(item.ItemAttributes, "Title") else ""
             rank = str(item.SalesRank) if hasattr(item, "SalesRank") else ""
             minprice = asin2min(item.ASIN) if hasattr(item, "ASIN") else ""
-            bn = asin2bn(item.ASIN) if hasattr(item, "ASIN") else ""
+            bn = asin2bn(item.ASIN.text) if hasattr(item, "ASIN") else ""
             output.write('%s|%s|%s|%s|%s|%s\n' % (bc, asin, title, rank, minprice, bn))
-
     except:
         output.write("%s|exception||||\n" % (bc))
 output.close()
