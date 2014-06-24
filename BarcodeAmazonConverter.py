@@ -3,15 +3,8 @@ from BeautifulSoup import asin2min, asin2bn
 import unicodedata
 
 
-def if_error(func, input, default_value):
-    try:
-        r = func(input)
-    except:
-        r = default_value
-    return r
-
-
 api = amazonproduct.API(locale='uk')
+# config at C:\Users\user\.amazon-product-api
 
 barcodes = open('barcodes.txt')
 output = open('b2a.csv', 'w')
