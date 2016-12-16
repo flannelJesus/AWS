@@ -217,3 +217,5 @@ pip-log.txt
 #My Own Ignore Files
 .idea/
 venv/
+barcodes.txt
+b2a.csv
